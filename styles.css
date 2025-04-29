@@ -1,2 +1,59 @@
 
 /* Your CSS Code here. */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.scene-1 {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+}
+
+.cube-1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+/* Individual face styles */
+.front {
+  background: #ff6b6b;
+  transform: rotateY(0deg) translateZ(100px);
+}
+.back {
+  background: #6b6bff;
+  transform: rotateY(180deg) translateZ(100px);
+}
+.left {
+  background: #6bff6b;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.right {
+  background: #ffff6b;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.top
